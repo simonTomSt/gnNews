@@ -4,6 +4,7 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
+import 'antd/dist/reset.css';
 
 import { RoutesPaths } from '@/utils';
 import { RootLayout } from '@/layouts';
