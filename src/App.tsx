@@ -4,10 +4,11 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
-import 'antd/dist/reset.css';
+import { ConfigProvider as ThemeProvider } from 'antd';
 
-import { RoutesPaths } from '@/utils';
+import { RoutesPaths, theme } from '@/utils';
 import { RootLayout } from '@/layouts';
+import './styles/main.scss';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,7 +17,11 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <ThemeProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
 };
 
 export default App;
