@@ -1,0 +1,16 @@
+@use '@scss/_colors';
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  color: colors.$white;
+
+  &:hover {
+    color: colors.$white;
+  }
+
+  & span {
+    color: colors.$primary;
+  }
+}
