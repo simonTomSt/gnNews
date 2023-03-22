@@ -1,7 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
+import newsDisplayModeSliceReducer from './newsDisplayModeSlice';
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    newsDisplayMode: newsDisplayModeSliceReducer,
+  },
+  devTools: true,
 });
 
 export type RootState = ReturnType<typeof store.getState>;
