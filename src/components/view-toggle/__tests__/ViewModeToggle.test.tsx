@@ -1,30 +1,13 @@
-import { fireEvent, render, screen } from '@testing-library/react';
-import configureStore, { type MockStoreEnhanced } from 'redux-mock-store';
-import { Provider } from 'react-redux';
+import { fireEvent, screen } from '@testing-library/react';
 
-import { NewsDisplayMode } from '@/utils/types';
 import { setDisplayMode } from '@/store';
+import { NewsDisplayMode } from '@/utils/types';
+import { renderWithProviders } from '@/utils/testing-utils';
 import { ViewModeToggle } from '../ViewModeToggle';
 
-const mockStore = configureStore([]);
-
 describe('ViewModeToggle Component', () => {
-  let store: MockStoreEnhanced<unknown, {}>;
-
-  beforeEach(() => {
-    store = mockStore({
-      newsDisplayMode: {
-        mode: NewsDisplayMode.Tile,
-      },
-    });
-  });
-
   it('renders the component with proper values and active default value', () => {
-    render(
-      <Provider store={store}>
-        <ViewModeToggle />
-      </Provider>
-    );
+    renderWithProviders(<ViewModeToggle />);
 
     const tileRadio = screen.getByDisplayValue(NewsDisplayMode.Tile);
     const rowRadio = screen.getByDisplayValue(NewsDisplayMode.Row);
@@ -36,11 +19,7 @@ describe('ViewModeToggle Component', () => {
   });
 
   it('dispatches setDisplayMode action on mode change', () => {
-    render(
-      <Provider store={store}>
-        <ViewModeToggle />
-      </Provider>
-    );
+    const { store } = renderWithProviders(<ViewModeToggle />);
 
     const rowButton = screen.getByTestId(`${NewsDisplayMode.Row}-radio`);
     fireEvent.click(rowButton);

@@ -15,21 +15,25 @@ export const ViewModeToggle = () => {
   };
 
   return (
-    <>
-      <Radio.Group
-        defaultValue={displayMode}
-        size="large"
-        buttonStyle="solid"
-        onChange={handleDisplayModeChange}
-        className={styles.toggle}
+    <Radio.Group
+      defaultValue={displayMode}
+      size="large"
+      buttonStyle="solid"
+      onChange={handleDisplayModeChange}
+      className={styles.toggle}
+    >
+      <Radio.Button
+        value={NewsDisplayMode.Tile}
+        data-testid={`${NewsDisplayMode.Tile}-radio`}
       >
-        <Radio.Button value={NewsDisplayMode.Tile}>
-          <AppstoreOutlined className={styles.toggle__icon} />
-        </Radio.Button>
-        <Radio.Button value={NewsDisplayMode.Row}>
-          <BarsOutlined className={styles.toggle__icon} />
-        </Radio.Button>
-      </Radio.Group>
-    </>
+        <AppstoreOutlined className={styles.toggle__icon} />
+      </Radio.Button>
+      <Radio.Button
+        value={NewsDisplayMode.Row}
+        data-testid={`${NewsDisplayMode.Row}-radio`}
+      >
+        <BarsOutlined className={styles.toggle__icon} />
+      </Radio.Button>
+    </Radio.Group>
   );
 };
