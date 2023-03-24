@@ -9,6 +9,7 @@ import { ConfigProvider as ThemeProvider } from 'antd';
 import { RoutesPaths, theme } from '@/utils';
 import { RootLayout } from '@/layouts';
 import './styles/main.scss';
+import { TranslationProvider } from './translations';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,9 +19,11 @@ const router = createBrowserRouter(
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <RouterProvider router={router} />
-    </ThemeProvider>
+    <TranslationProvider>
+      <ThemeProvider theme={theme}>
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </TranslationProvider>
   );
 };
 
