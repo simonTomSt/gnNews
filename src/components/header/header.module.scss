@@ -1,0 +1,16 @@
+@use '@scss/_colors';
+
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: colors.$grey-10;
+}
+
+.header__end-col {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

@@ -1,3 +1,4 @@
+import { defaultStoreState } from '@/utils/testing-utils';
 import { NewsDisplayMode } from '@/utils/types';
 import newsDisplayModeReducer, {
   selectDisplayMode,
@@ -23,9 +24,9 @@ describe('newsDisplayModeSlice', () => {
 });
 
 describe('selectDisplayMode selector', () => {
-  const appState = { newsDisplayMode: { mode: NewsDisplayMode.Tile } };
-
   it('should return news display mode from store', () => {
-    expect(selectDisplayMode(appState)).toEqual(appState.newsDisplayMode.mode);
+    expect(selectDisplayMode(defaultStoreState)).toEqual(
+      defaultStoreState.newsDisplayMode.mode
+    );
   });
 });
