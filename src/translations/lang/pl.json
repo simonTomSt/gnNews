@@ -1,5 +1,6 @@
 {
   "my_thoughts.open_modal_button": "Moje przemyślenia",
+  "my_thoughts.desc": "Najtrudniejsza okazała się konfiguracja vite z jest, natomiast największą frajdę sprawiło mi poznawanie najnowszej wersji react-router oraz antd",
   "footer.current_time": "Aktualna godzina:",
   "footer.total_news": "Liczba artykułów:",
   "article.source": "Źródło",

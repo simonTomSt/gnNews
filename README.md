@@ -74,3 +74,11 @@ The app supports news from the following countries:
 ### Language Support
 
 The app supports both Polish and English languages.
+
+### Example filled env
+
+`API_URL=https://newsapi.org`
+
+`API_KEY=24f5da1dbb8a41f2b6c0f9ff925105a9`
+
+`FLAGS_URL=https://flagsapi.com`

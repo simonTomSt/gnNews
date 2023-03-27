@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Modal } from 'antd';
+import { Button, Modal, Typography } from 'antd';
 import { InfoCircleOutlined } from '@ant-design/icons';
 import { FormattedMessage } from 'react-intl';
 
@@ -30,11 +30,12 @@ export const MyThoughts = () => {
       <Modal
         open={isModalOpen}
         footer={[]}
-        title={<FormattedMessage id="my_thoughts.open_modal_button" />}
         onOk={closeModal}
         onCancel={closeModal}
       >
-        <FormattedMessage id="my_thoughts.open_modal_button" />
+        <Typography.Paragraph style={{ paddingRight: 20 }}>
+          <FormattedMessage id="my_thoughts.desc" />
+        </Typography.Paragraph>
       </Modal>
     </>
   );

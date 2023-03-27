@@ -1,5 +1,6 @@
 {
   "my_thoughts.open_modal_button": "My thoughts",
+  "my_thoughts.desc": "The most challenging part was configuring Vite with Jest, but the most enjoyable aspect was learning the latest version of React Router and Ant Design.",
   "footer.current_time": "Current hour:",
   "footer.total_news": "Articles count:",
   "article.source": "Source",
