@@ -1,0 +1,10 @@
+.news {
+  width: 100%;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  &--row {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}
