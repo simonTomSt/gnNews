@@ -1,4 +1,4 @@
-import { cloneElement, ReactElement } from 'react';
+import { ReactElement } from 'react';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 
@@ -31,35 +31,16 @@ export const renderWithProviders = (
   component: ReactElement,
   options: RenderWithProvidersOptions = {}
 ) => {
-  const {
-    reduxProvider = true,
-    reduxState = {},
-    translationProvider = false,
-  } = options;
+  const { reduxState = {} } = options;
 
   const customStore = mockStore({ ...defaultStoreState, ...reduxState });
-  const providers = [];
 
-  if (reduxProvider) {
-    providers.push(
-      <Provider store={customStore} key="reduxProvider">
-        <>{component}</>
-      </Provider>
-    );
-  }
-
-  if (translationProvider) {
-    providers.push(
+  const renderResult = render(
+    <Provider store={customStore} key="reduxProvider">
       <TranslationProvider key="translationProvider">
         <>{component}</>
       </TranslationProvider>
-    );
-  }
-
-  const renderResult = render(
-    providers.reduce((wrappedComponent, provider) => {
-      return cloneElement(provider, {}, wrappedComponent);
-    }, component)
+    </Provider>
   );
 
   return { renderResult, store: customStore };
