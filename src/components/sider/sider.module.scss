@@ -1,11 +1,17 @@
 @use '@scss/_colors';
 
 .sider {
-  overflow: auto;
   height: 100vh;
-  position: fixed;
+  position: fixed !important;
   left: 0;
   top: 0;
   bottom: 0;
-  background-color: colors.$white !important;
+  padding-top: 70px;
+  z-index: 1;
+}
+
+.additional-actions {
+  &__select {
+    margin-left: 15px;
+  }
 }

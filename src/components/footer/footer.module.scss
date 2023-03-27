@@ -2,4 +2,6 @@
 
 .footer {
   background-color: colors.$white;
+  display: flex;
+  justify-content: space-between;
 }

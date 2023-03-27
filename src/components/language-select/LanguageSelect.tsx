@@ -1,11 +1,11 @@
-import { Select } from 'antd';
+import { Select, SelectProps } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { setLanguage, slectLanguage } from '@/store';
 import { languagesMap } from '@/utils/constants';
 import styles from './language-select.module.scss';
 
-export const LanguageSelect = () => {
+export const LanguageSelect = (props: SelectProps) => {
   const dispatch = useDispatch();
   const currentLangage = useSelector(slectLanguage);
   const options = Array.from(languagesMap.values()).map((lang) => ({
@@ -25,6 +25,7 @@ export const LanguageSelect = () => {
       defaultValue={currentLangage}
       onChange={handleLanguageChange}
       options={options}
+      {...props}
     />
   );
 };

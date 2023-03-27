@@ -18,18 +18,19 @@ export const MyThoughts = () => {
     <>
       <Button
         type="link"
+        size="large"
         onClick={showModal}
         icon={<InfoCircleOutlined />}
-        size="large"
       >
         <span>
-          <FormattedMessage id="my_thoughts.open_modal_button" />
+          <FormattedMessage id={`my_thoughts.open_modal_button`} />
         </span>
       </Button>
 
       <Modal
-        title={<FormattedMessage id="my_thoughts.open_modal_button" />}
         open={isModalOpen}
+        footer={[]}
+        title={<FormattedMessage id="my_thoughts.open_modal_button" />}
         onOk={closeModal}
         onCancel={closeModal}
       >
