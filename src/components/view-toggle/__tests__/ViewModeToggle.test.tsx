@@ -2,7 +2,7 @@ import { fireEvent, screen } from '@testing-library/react';
 
 import { setDisplayMode } from '@/store';
 import { NewsDisplayMode } from '@/utils/types';
-import { renderWithProviders } from '@/utils/testing-utils';
+import { renderWithProviders } from '@/utils/testing';
 import { ViewModeToggle } from '../ViewModeToggle';
 
 describe('ViewModeToggle Component', () => {

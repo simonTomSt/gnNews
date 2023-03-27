@@ -1,6 +1,6 @@
-import Axios from 'axios/index';
+import axios from 'axios';
 
-export const api = Axios.create({
+export const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
   headers: {
     Accept: 'application/json',

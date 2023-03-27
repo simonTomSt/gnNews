@@ -1,4 +1,4 @@
-import { defaultStoreState } from '@/utils/testing-utils';
+import { defaultStoreState } from '@/utils/testing';
 import { NewsDisplayMode } from '@/utils/types';
 import newsDisplayModeReducer, {
   selectDisplayMode,

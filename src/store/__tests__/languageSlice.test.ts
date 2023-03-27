@@ -1,4 +1,4 @@
-import { defaultStoreState } from '@/utils/testing-utils';
+import { defaultStoreState } from '@/utils/testing';
 import languageReducer, { setLanguage, slectLanguage } from '../languageSlice';
 
 describe('languageSlice', () => {

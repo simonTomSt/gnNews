@@ -1,6 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react';
 import { setLanguage } from '@/store';
-import { renderWithProviders } from '@/utils/testing-utils';
+import { renderWithProviders } from '@/utils/testing';
 import { LanguageSelect } from '../LanguageSelect';
 
 describe('LanguageSelect componet', () => {

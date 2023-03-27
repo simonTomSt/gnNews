@@ -1,10 +1,12 @@
 import { cloneElement, ReactElement } from 'react';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
+
 import { render } from '@testing-library/react';
 import { RootState } from '@/store';
 import { TranslationProvider } from '@/translations';
-import { NewsDisplayMode } from './types';
+import { NewsDisplayMode } from '../types';
+import { mockArticle } from './mockData';
 
 type RenderWithProvidersOptions = {
   reduxProvider?: boolean;
@@ -17,6 +19,10 @@ export const defaultStoreState: RootState = {
     mode: NewsDisplayMode.Tile,
   },
   language: { lang: 'pl' },
+  news: {
+    news: { articles: [mockArticle], status: 'ok', totalResults: 2 },
+    requestStatus: 'success',
+  },
 };
 
 const mockStore = configureMockStore([]);
