@@ -13,7 +13,7 @@ export const mockArticle: Article = {
   url: 'https://www.cnbc.com/2023/03/24/deutsche-bank-shares-slide-8percent-after-a-sudden-spike-in-default-insurance-costs.html',
   urlToImage:
     'https://image.cnbcfm.com/api/v1/image/107029826-1647259558003-gettyimages-166811556-RUSSIA_FOREIGN_BANKS.jpeg?v=1679648746&w=1920&h=1080',
-  publishedAt: new Date(),
+  publishedAt: new Date('July 21, 1983 01:15:00'),
   content:
     'Deutsche Bank shares fell by more than 13% on Friday morning following a spike in credit default swaps on Thursday night, as concerns about the stability of European banks persisted.\r\nThe German lend… [+2940 chars]',
 };

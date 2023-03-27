@@ -1,4 +1,25 @@
 {
   "my_thoughts.open_modal_button": "My thoughts",
-  "footer.current_time": "Current hour:"
+  "footer.current_time": "Current hour:",
+  "footer.total_news": "Articles count:",
+  "article.source": "Source",
+  "article.author": "Author",
+  "article.publicationDate": "Publication date",
+  "article.viewMore": "View the whole article",
+  "serverError.message": "Sorry, an unexpected server error occurred, please try again later.",
+  "empty.message": "No data",
+  "notFound.message": "Sorry, the page you visited does not exist.",
+  "backButton": "Back Home",
+  "countries.pl": "Poland",
+  "countries.us": "USA",
+  "countries.gb": "UK",
+  "countries.de": "Germany",
+  "countries.fr": "France",
+  "countries.cn": "China",
+  "countries.it": "Italy",
+  "countries.ru": "Russia",
+  "countries.il": "Israel",
+  "countries.au": "Australia",
+  "countries.jp": "Japan",
+  "countries.ua": "Ukraine"
 }

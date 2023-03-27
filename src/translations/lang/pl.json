@@ -1,4 +1,25 @@
 {
   "my_thoughts.open_modal_button": "Moje przemyślenia",
-  "footer.current_time": "Aktualna godzina:"
+  "footer.current_time": "Aktualna godzina:",
+  "footer.total_news": "Liczba artykułów:",
+  "article.source": "Źródło",
+  "article.author": "Autor",
+  "article.publicationDate": "Data publikacji",
+  "article.viewMore": "Zobacz cały artykuł",
+  "serverError.message": "Przepraszamy, wystąpił niespodziewany błąd serwera, spróbuj ponownie za chwilę.",
+  "empty.message": "Brak danych",
+  "notFound.message": "Przepraszamy, nie odnaleźliśmy strony pod podanym adresem.",
+  "backButton": "Powróć do strony głównej",
+  "countries.pl": "Polska",
+  "countries.us": "USA",
+  "countries.gb": "Wielka Brytania",
+  "countries.de": "Niemcy",
+  "countries.fr": "Francja",
+  "countries.cn": "Chiny",
+  "countries.it": "Włochy",
+  "countries.ru": "Rosja",
+  "countries.il": "Izrael",
+  "countries.au": "Australia",
+  "countries.jp": "Japonia",
+  "countries.ua": "Ukraina"
 }

@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: process.env.API_URL,
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-    'X-Api-Key': import.meta.env.VITE_API_KEY,
+    'X-Api-Key': process.env.API_KEY,
   },
 });
